@@ -1,0 +1,227 @@
+.bg-light {
+    background-color: #081621 !important;
+}
+body {
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+.NAV {
+    color: white !important; /* Force white text */
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+}
+.search-container {
+    position: relative;
+    inline-size: 400px;
+}
+
+.search-input {
+    inline-size: 100%;
+    /* border-radius: 30px; */
+    padding: 6px 40px 6px 15px;
+    block-size: 47px;
+    inline-size: 1000px;
+    font-size: 14px;
+}
+.search-icon {
+    position: absolute;
+    inset-inline-end: 3px;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+}
+.search-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+@media (max-inline-size: 768px) {
+    .search-container {
+        inline-size: 100%;
+        margin-block-start: 10px;
+    }
+}
+.sidebar {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: -300px;
+    inline-size: 280px;
+    block-size: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 1050;
+    padding: 20px;
+}
+
+.sidebar.show {
+    inset-inline-start: 0;
+}
+
+.sidebar-header {
+    border-block-end: 1px solid #ddd;
+    padding-block-end: 10px;
+}
+
+.sidebar-content h6 {
+    margin-block-start: 40px;
+    font-weight: bold;
+}
+
+.sidebar-content ul li {
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    block-size: 100%;
+    inline-size: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1049;
+}
+
+.overlay.show {
+    display: block;
+}
+.iconsidebar {
+    position: fixed;
+    background-color: white;
+    transform: translateY(-50%);
+    inline-size: 80px;
+    block-size: auto;
+    border-radius: 0 5px 5px 0;
+}
+.iconsidebar-toggle {
+    position: fixed;
+    inset-block-start: 50%;
+    inset-inline-start: -10px;
+    transform: translateY(-50%);
+    z-index: 1060;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.iconsidebar1 {
+    inline-size: 40px;
+    block-size: auto;
+    border-radius: 0 5px 5px 0;
+}
+.side {
+    block-size: 100%;
+    inline-size: 100%;
+    background-color: #081621;
+    position: fixed;
+    inset-block-start: 0;
+}
+.product-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-20px);
+}
+.product-title {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.product-price {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+}
+.product-img {
+    inline-size: 100%;
+    block-size: 200px;
+    object-fit: cover;
+}
+
+.dropdown-menu-center {
+    inset-inline-start: 50%;
+    transform: translateX(-50%) !important;
+    inset-inline-end: auto !important;
+}
+.custom-dropdown {
+    min-inline-size: 120px;
+    text-align: center;
+    border: none;
+}
+
+.disable-link {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: default;
+}
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+.btn-box {
+    position: relative;
+    background-color: #081621;
+    inline-size: 60px; /* fixed width for both */
+    block-size: 60px; /* fixed height */
+    border-radius: 10px;
+    padding-block-start: 10px;
+    color: white;
+}
+.btn-box p {
+    margin: 0;
+    font-size: 8px;
+}
+body {
+    padding-block-start: 70px;
+}
+
+.typing {
+    overflow: hidden; /* Ensures text is hidden beyond the typing area */
+    border-inline-end: 1px solid white; /* Cursor effect */
+    white-space: nowrap;
+    animation: typing 2s steps(20) forwards,
+        blink 0.75s step-end infinite alternate;
+    font-family: monospace;
+}
+
+@keyframes typing {
+    from {
+        inline-size: 0;
+    }
+    to {
+        inline-size: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+footer a:hover {
+    color: #00aced !important;
+    text-decoration: underline;
+}
