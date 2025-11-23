@@ -32,7 +32,7 @@
 
                     @foreach($monthlySales as $index => $sale)
                         <span style="font-size: 20px;">
-                            {{ $months[$index] }} : ${{ number_format($sale, 2) }}
+                            {{ $months[$index] }} : ৳{{ number_format($sale, 2) }}
                         </span><br>
                     @endforeach
 
@@ -55,7 +55,7 @@
                     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
                 ],
                 datasets: [{
-                    label: 'Total Sales per Month',
+                    label: 'Total Earnings per Month',
                     data: @json($monthlySales),
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',

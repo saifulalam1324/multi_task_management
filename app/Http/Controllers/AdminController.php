@@ -350,12 +350,12 @@ class AdminController extends Controller
             ->select('serviceproviders.*', 'servicerequests.*')
             ->where('serviceproviders.sp_id', $id)->first();
         $total_payment = DB::table('servicerequests')
-            ->where('c_id', $id)
+            ->where('sp_id', $id)
             ->where('status', 'completed')
             ->where('payment_status', 'paid')
             ->sum('payment_sp');
         $total_services = DB::table('servicerequests')
-            ->where('c_id', $id)
+            ->where('sp_id', $id)
             ->where('status', 'completed')
             ->where('payment_status', 'paid')
             ->count();
@@ -372,8 +372,6 @@ class AdminController extends Controller
     public function MONTHLYSALES()
     {
         $currentYear = Carbon::now()->year;
-
-        // Fetch monthly sales
         $monthlySales = DB::table('servicerequests')
             ->select(
                 DB::raw('MONTH(work_completed_at) as month'),

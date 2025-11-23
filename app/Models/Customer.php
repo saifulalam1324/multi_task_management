@@ -9,9 +9,19 @@ use Illuminate\Notifications\Notifiable;
 
 class Customer extends Authenticatable
 {
-    use HasFactory,Notifiable;
+     use HasFactory;
 
     protected $primaryKey = 'c_id';
-    protected $fillable = ['name', 'email', 'password'];
-    protected $table = 'customers';
+
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'address',
+        'password',
+    ];
+
+    protected $hidden = [
+        'password',
+    ];
 }
