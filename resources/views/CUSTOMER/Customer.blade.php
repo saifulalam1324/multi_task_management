@@ -102,7 +102,7 @@
             <hr class="bg-light">
 
             <div class="text-center">
-                <p class="mb-0">&copy; {{ date('Y') }} Your Market. All Rights Reserved.</p>
+                <p class="mb-0">&copy; {{ date('Y') }} Service লাগবে?. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
